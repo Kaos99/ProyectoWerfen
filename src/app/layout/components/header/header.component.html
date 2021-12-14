@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="https://placeimg.com/512/512/animals" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      Mundo Animal
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li *ngFor="let item of itemsHeader" class="nav-item">
+          <a class="nav-link" [routerLink]="[item?.url]">
+            {{ item?.name}}
+          </a>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <input id="password-input" class="form-control me-2" type="password" placeholder="Contraseña" #pass>
+        <button class="btn btn-primary" type="button" (click)="btnAcceder();">Acceder</button>
+      </form>
+    </div>
+  </div>
+</nav>
